@@ -154,8 +154,10 @@ class screen(Widget):
         # sort the transitions. (are these astronomical events always guaranteed to be in the same order?)
         year_transitions.sort(key=lambda x: x[1])
         year_transitions = [x for x in year_transitions if rn.date() <= x[1]]
-        self.year_transition_1 = f'{year_transitions[0][0]} {year_transitions[0][1].strftime("%Y.%m.%d")}'
-        self.year_transition_2 = f'{year_transitions[1][0]} {year_transitions[1][1].strftime("%Y.%m.%d")}'
+        self.year_transition_1 = f'{year_transitions[0][0]}  {year_transitions[0][1].strftime("%Y.%m.%d")}  ' \
+                                 f'Δ{(year_transitions[0][1] - rn.date()).days}d'
+        self.year_transition_2 = f'{year_transitions[1][0]}  {year_transitions[1][1].strftime("%Y.%m.%d")}  ' \
+                                 f'Δ{(year_transitions[1][1] - rn.date()).days}d'
 
     def daylen_tostr(self, td):
         rtn = f'{td.seconds // 3600:02}h ' \
