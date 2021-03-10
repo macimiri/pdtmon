@@ -60,7 +60,7 @@ class screen(Widget):
         # update alpha brightness according to time of day
         if rn.time() < datetime.time(6):
             self.alpha = 0.25
-        elif rn.time() < datetime.time(22):
+        elif rn.time() < datetime.time(20):
             self.alpha = 0.80
         else:
             self.alpha = 0.25
