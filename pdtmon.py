@@ -109,14 +109,14 @@ class screen(Widget):
 
         # compute how much longer today was vs yesterday, change delta text color
         self.yesterday_today_delta_str = self.daydelta_tostr(day_length_today - day_length_yesterday)
-        if self.yesterday_today_delta_str[0] == '+':
+        if self.yesterday_today_delta_str[1] == '+':
             self.ids.yest_delta.color = (0,1,0,self.alpha)
         else:
             self.ids.yest_delta.color = (1,0,0,self.alpha)
 
         # compute how much longer tomorrow will be vs today, change delta text color
         self.today_tomorrow_delta_str = self.daydelta_tostr(day_length_tomorrow - day_length_today)
-        if self.today_tomorrow_delta_str[0] == '+':
+        if self.today_tomorrow_delta_str[1] == '+':
             self.ids.tom_delta.color = (0,1,0,self.alpha)
         else:
             self.ids.tom_delta.color = (1,0,0,self.alpha)
@@ -166,7 +166,7 @@ class screen(Widget):
         return rtn
 
     def daydelta_tostr(self, td):
-        rtn = ''
+        rtn = 'Δ'
         if td < datetime.timedelta():
             td = -td
             rtn += '-'
