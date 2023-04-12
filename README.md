@@ -31,23 +31,8 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <!-- <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul> -->
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -58,6 +43,7 @@
 
 [![pdtmon demo](img/example_screen.png)](https://www.google.com)
 
+This project is intended to be displayed on a screen connected to a Raspberry Pi Zero W. It calculates the day length and lists related information like day length delta from day to day, dawn/dusk information (based on civil twilight), and equinoxes/solstices, time changes.:w
 
 
 
